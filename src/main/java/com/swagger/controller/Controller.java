@@ -1,18 +1,18 @@
-package com.controller;
+package com.swagger.controller;
 
-import com.domain.Student;
+import com.swagger.model.Student;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/stud")
 public class Controller {
 
     List<Student> students = new ArrayList<Student>();
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Student> getAllStudents() {
 
         System.out.print("test");
@@ -26,7 +26,7 @@ public class Controller {
         return students;
     }
 
-    @PostMapping("/")
+    @PostMapping("/add")
     public Student addStudent(@RequestBody Student stud) {
         students.add(stud);
         return stud;

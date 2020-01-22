@@ -1,4 +1,4 @@
-package com.domain;
+package com.swagger.model;
 
 public class Student {
     private int id;
